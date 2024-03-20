@@ -5,7 +5,7 @@ on:
       - main
 env:
   AWS_REGION: "ca-central-1"
-  permissions:
+permissions:
       id-token: write
       contents: read
 
@@ -19,10 +19,10 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
            role-to-assume: arn:aws:iam::851725262343:role/github-oidc-role
-           role-session-name: 
+           role-session-name: github-oidc-role
            aws-region: ${{ env.AWS_REGION }}
       - name: Set up Terraform
-        uses: hashicorp/setup-terraform@v1
+        uses: hashicorp/setup-terraform@v2
       - name: Terraform init
         run: terraform init
         working-directory: ./Terraform
