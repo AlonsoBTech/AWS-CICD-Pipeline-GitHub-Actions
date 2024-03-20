@@ -2,3 +2,4 @@
 .terraform.lock.hcl
 terraform.tfstate
 terraform.tfstate.backup
+AWS-deploy.yml.backup

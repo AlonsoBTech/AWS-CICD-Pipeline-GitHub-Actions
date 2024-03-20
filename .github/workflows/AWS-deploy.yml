@@ -29,11 +29,9 @@ jobs:
       - name: Terraform validate
         run: terraform validate
         working-directory: ./Terraform
-      - name: Terraform Validate
-        run: terraform validate
-        working-directory: ./Terraform
       - name: Terraform Plan
         run: terraform plan
         working-directory: ./Terraform
       - name: Terraform Apply
-        run: terraform apply --auto-approve
+        run: terraform apply -auto-approve
+        working-directory: ./Terraform
