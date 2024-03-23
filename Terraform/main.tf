@@ -30,15 +30,14 @@ resource "aws_internet_gateway" "Git_IGW" {
 resource "aws_route_table" "Git_Public_Route" {
   vpc_id = aws_vpc.GitHub_test.id
 
+  route {
+        cidr_block = "0.0.0.0/0"
+        gateway_id = aws_internet_gateway.Git_IGW.id
+  }
+
   tags = {
     Name = "Git_Pub_RT"
   }
-}
-
-resource "aws_route" "Git_Route_Pub" {
-  route_table_id         = aws_route_table.Git_Public_Route.id
-  destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = aws_internet_gateway.Git_IGW.id
 }
 
 resource "aws_route_table_association" "Git_pub_asso1" {
