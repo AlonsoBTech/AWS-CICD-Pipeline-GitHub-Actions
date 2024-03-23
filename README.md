@@ -7,6 +7,7 @@ Using GitHub Actions we will create a CICD Pipeline to deploy resources to AWS u
 - AWS Account
 - AWS IAM User
 - Terraform Installed
+- IDE of choice to write Terraform code
 
 # WHAT IS BEING CREATED
 - VPC
