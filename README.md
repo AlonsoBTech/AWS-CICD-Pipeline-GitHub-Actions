@@ -1,6 +1,7 @@
-AWS TERRAFORM CICD PIPELINE
+              AWS TERRAFORM CICD PIPELINE
 
 ABOUT
+
 Using GitHub Actions we will create a CICD Pipeline to deploy resources to AWS using Terraform code.
 
 PREREQUISITES
