@@ -1,3 +1,4 @@
+### Creating VPC
 resource "aws_vpc" "GitHub_test" {
   cidr_block           = "10.0.0.0/16"
   enable_dns_hostnames = true
@@ -8,6 +9,7 @@ resource "aws_vpc" "GitHub_test" {
   }
 }
 
+### Creating VPC Subnet
 resource "aws_subnet" "Git_Public_Subnet_1" {
   vpc_id                  = aws_vpc.GitHub_test.id
   cidr_block              = "10.0.1.0/24"
@@ -19,6 +21,8 @@ resource "aws_subnet" "Git_Public_Subnet_1" {
   }
 }
 
+
+### Creating VPC Internet Gateway
 resource "aws_internet_gateway" "Git_IGW" {
   vpc_id = aws_vpc.GitHub_test.id
 
@@ -27,6 +31,7 @@ resource "aws_internet_gateway" "Git_IGW" {
   }
 }
 
+### Creating VPC Route Table
 resource "aws_route_table" "Git_Public_Route" {
   vpc_id = aws_vpc.GitHub_test.id
 
@@ -40,6 +45,7 @@ resource "aws_route_table" "Git_Public_Route" {
   }
 }
 
+### Creating VPC Route Table Association
 resource "aws_route_table_association" "Git_pub_asso1" {
   subnet_id      = aws_subnet.Git_Public_Subnet_1.id
   route_table_id = aws_route_table.Git_Public_Route.id
