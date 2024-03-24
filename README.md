@@ -129,6 +129,7 @@ resource "aws_route_table_association" "Git_pub_asso1" {
   subnet_id      = aws_subnet.Git_Public_Subnet_1.id
   route_table_id = aws_route_table.Git_Public_Route.id
 }
+```
 
 </details>
 
@@ -200,8 +201,10 @@ jobs:
       - name: Terraform Destroy
         run: terraform apply -auto-approve
         working-directory: ./Terraform
+```
 
 </details>
+
 
 
 
