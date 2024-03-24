@@ -40,12 +40,18 @@ git clone https://github.com/AlonsoBTech/AWS-CICD-Pipeline.git
 cd AWS-CICD-Pipeline
 ```
 
+**Create your Terraform folder**
+```bash
+mkdir Terraform
+cd Terraform
+```
+
 **Create your Terraform providers.tf file**
 
 </details>
 
 <details>
-<summary><code>Terraform/providers.tf</code></summary>
+<summary><code>providers.tf</code></summary>
 
 ```bash
 terraform {
@@ -68,7 +74,7 @@ provider "aws" {
 </details>
 
 <details>
-<summary><code>Terraform/main.tf</code></summary>
+<summary><code>main.tf</code></summary>
 
 ```bash
 ### Creating VPC
@@ -125,4 +131,77 @@ resource "aws_route_table_association" "Git_pub_asso1" {
 }
 
 </details>
+
+**Create your gitignore file**
+
+</details>
+
+<details>
+<summary><code>.gitignore</code></summary>
+
+```bash
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+```
+
+</details>
+
+**Create your GitHub Actions workflow folder**
+
+```bash
+mkdir .github/workflow
+```
+</details>
+
+**Create your GitHub Actions deployment file**
+
+</details>
+
+<details>
+<summary><code>AWS-deploy.yml</code></summary>
+
+```bash
+name: AWS Terraform Deployment
+on:
+  push:
+    branches:
+      - main
+env:
+  AWS_REGION: "ca-central-1"
+permissions:
+      id-token: write
+      contents: read
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+           role-to-assume: arn:aws:iam::851725262343:role/github-oidc-role
+           role-session-name: github-oidc-role
+           aws-region: ${{ env.AWS_REGION }}
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v2
+      - name: Terraform init
+        run: terraform init
+        working-directory: ./Terraform
+      - name: Terraform validate
+        run: terraform validate
+        working-directory: ./Terraform
+      - name: Terraform Plan
+        run: terraform plan
+        working-directory: ./Terraform
+      - name: Terraform Destroy
+        run: terraform apply -auto-approve
+        working-directory: ./Terraform
+
+</details>
+
+
 
