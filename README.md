@@ -236,6 +236,8 @@ code to add your addition resources or make changes to your current resources.
 ## <a name="links">🔗 Links</a>
 
 - [Terraform AWS Provider Registry](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+- [Creating AWS Credentials for GitHub Actions](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html)
+- [Configuring AWS Credentials for GitHub Actions](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
 - Coming Soon: Blog post with detailed step by step walk through to complete this project.
 
 
