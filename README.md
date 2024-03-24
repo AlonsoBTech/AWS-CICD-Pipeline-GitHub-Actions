@@ -1,3 +1,5 @@
+![_d0877801-4ca2-4c89-acb7-1766e7ee6bc0](https://github.com/AlonsoBTech/AWS-CICD-Pipeline/assets/160416175/d49d4dea-e40f-4f38-a8e1-c894a1e9a609)
+
 # AWS Terraform CICD Pipeline
 
 ## 📋 <a name="table">Table of Contents</a>
@@ -152,7 +154,8 @@ terraform.tfstate.backup
 **Create your GitHub Actions workflow folder**
 
 ```bash
-mkdir .github/workflow
+mkdir .github/workflows
+cd .github/workflows
 ```
 </details>
 
@@ -205,6 +208,33 @@ jobs:
 
 </details>
 
+**Add your code to git repository**
 
+```bash
+cd ../..
+git add .
+```
+
+**Commit your code to the repository**
+
+```bash
+git commit -m "First Commit"
+```
+
+**Push your code to the repository**
+
+```bash
+git push origin main
+```
+
+**Check your AWS console to ensure resources created**
+That's it we are done with the CICD Pipeline, you can edit the terraform code to add more resources
+to be deployed and push the code to your git repository then the GitHub Action file will run the 
+code to add your addition resources or make changes to your current resources.
+
+## <a name="links">🔗 Links</a>
+
+- [Terraform AWS Provider Registry](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+- Coming Soon: Blog post with detailed step by step walk through to complete this project.
 
 
