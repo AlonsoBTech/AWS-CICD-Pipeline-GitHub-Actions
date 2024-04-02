@@ -159,7 +159,7 @@ cd .github/workflows
 ```
 </details>
 
-**Create your GitHub Actions deployment file**
+**Create your GitHub Actions deployment file (NOTE: Links below for OpenID Connect setup)**
 
 </details>
 
