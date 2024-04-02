@@ -10,8 +10,8 @@
             "Condition": {
                 "StringEquals": {
                     "token.actions.githubusercontent.com:sub": [
-                        "repo:AlonsoBTech/AWS-CICD-Pipeline:pull_request",
-                        "repo:AlonsoBTech/AWS-CICD-Pipeline:ref:refs/heads/main"
+                        "repo:AlonsoBTech/AWS-CICD-Pipeline-GitHub-Actions:pull_request",
+                        "repo:AlonsoBTech/AWS-CICD-Pipeline-GitHub-Actions:ref:refs/heads/main"
                     ],
                     "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
                 }
