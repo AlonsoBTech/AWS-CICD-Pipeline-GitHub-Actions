@@ -227,7 +227,7 @@ git commit -m "First Commit"
 git push origin main
 ```
 
-**Check your AWS console to ensure resources created**
+**Check your AWS console to ensure resources were created**
 
 That's it we are done with the CICD Pipeline, you can edit the terraform code to add more resources
 to be deployed and push the code to your git repository then the GitHub Action file will run the 
