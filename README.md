@@ -1,6 +1,6 @@
 ![_d0877801-4ca2-4c89-acb7-1766e7ee6bc0](https://github.com/AlonsoBTech/AWS-CICD-Pipeline/assets/160416175/d49d4dea-e40f-4f38-a8e1-c894a1e9a609)
 
-# AWS Terraform CICD Pipeline
+# AWS Terraform CICD Pipeline GitHub Actions
 
 ## 📋 <a name="table">Table of Contents</a>
 
