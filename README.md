@@ -38,8 +38,8 @@ What we will be creating:
 **First create your git repository (name it whatever you like) then clone the git repository**
 
 ```bash
-git clone https://github.com/AlonsoBTech/AWS-CICD-Pipeline.git
-cd AWS-CICD-Pipeline
+git clone https://github.com/AlonsoBTech/AWS-CICD-Pipeline-GitHub-Actions.git
+cd AWS-CICD-Pipeline-GitHub-Actions
 ```
 
 **Create your Terraform folder**
