@@ -20,6 +20,7 @@ Make sure you have the following:
 
 - AWS Account
 - AWS IAM User
+- AWS IAM Role
 - Terraform Installed
 - IDE of choice to write Terraform code
 
